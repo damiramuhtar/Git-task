@@ -2,11 +2,11 @@
 <html lang="kk">
 <head>
     <meta charset="UTF-8">
-    <title>Балалар үйі Шанырақ</title>
+    <title>Балабақша Шанырақ</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #DDEBF7; /* основной фон сайта */
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            background: linear-gradient(to bottom, #FFF0F5, #E0FFFF); /* нежный градиент */
             margin: 0;
             padding: 20px;
         }
@@ -14,12 +14,30 @@
         header {
             text-align: center;
             margin-bottom: 20px;
+            position: relative;
         }
 
         h1 {
-            color: #3B6AA0;
+            color: #FF69B4;
             font-weight: bold;
+            font-size: 2.5em;
             margin-bottom: 10px;
+        }
+
+        /* Добавляем декоративные цветочки */
+        header::before {
+            content: "🌸🌼🌷";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            font-size: 2em;
+        }
+        header::after {
+            content: "🌼🌷🌸";
+            position: absolute;
+            right: 10px;
+            top: 0;
+            font-size: 2em;
         }
 
         nav {
@@ -29,31 +47,35 @@
 
         nav a {
             text-decoration: none;
-            color: #3B6AA0;
+            color: #FFB6C1;
             margin: 0 15px;
             font-weight: bold;
+            font-size: 1.1em;
         }
 
         nav a:hover {
             text-decoration: underline;
+            color: #FF69B4;
         }
 
         section {
             max-width: 800px;
             margin: 0 auto 30px auto;
-            background-color: #EAF3FB; /* фон блоков светлее на 3 тона */
-            padding: 15px;
-            border-radius: 8px;
-            border: 2px solid #2E5283; 
+            background-color: #FFFACD; /* светло-жёлтый блок */
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px dashed #FFB6C1;
+            box-shadow: 0 0 10px rgba(255,182,193,0.5);
+            position: relative;
         }
 
         section h2 {
-            color: #3B6AA0;
+            color: #FF69B4;
             margin-top: 0;
         }
 
         section p, section ul {
-            color: #3B6AA0;
+            color: #FF4500;
             line-height: 1.6;
         }
 
@@ -61,20 +83,30 @@
             padding-left: 20px;
         }
 
+        /* Маленькие декоративные игрушки в блоках */
+        section::before {
+            content: "🧸🎈🎨";
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            font-size: 1.5em;
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
-            color: #3B6AA0;
+            color: #FF69B4;
+            font-weight: bold;
         }
 
-        /* Стили попапа */
+        /* Попап приветствия */
         #welcome-popup {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(255,192,203,0.5);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -82,18 +114,18 @@
         }
 
         #popup-content {
-            background-color: #EAF3FB; /* фон попапа тоже светлее */
+            background-color: #FFF0F5;
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
             max-width: 400px;
-            box-shadow: 0 0 10px #000;
-            border: 2px solid #2E5283;
+            box-shadow: 0 0 15px #FFB6C1;
+            border: 2px solid #FF69B4;
         }
 
         #popup-content p {
             margin-bottom: 20px;
-            color: #3B6AA0;
+            color: #FF69B4;
             font-weight: bold;
         }
 
@@ -101,27 +133,27 @@
             padding: 10px 20px;
             margin: 0 10px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
             font-weight: bold;
         }
 
         #accept-btn {
-            background-color: #3B6AA0;
+            background-color: #FF69B4;
             color: #fff;
         }
 
         #decline-btn {
-            background-color: #ccc;
-            color: #333;
+            background-color: #FFD700;
+            color: #fff;
         }
 
         #accept-btn:hover {
-            background-color: #2E5283;
+            background-color: #FF1493;
         }
 
         #decline-btn:hover {
-            background-color: #999;
+            background-color: #FFC107;
         }
     </style>
 </head>
@@ -130,14 +162,14 @@
     <!-- Попап приветствия -->
     <div id="welcome-popup">
         <div id="popup-content">
-            <p>Добро пожаловать на сайт Балалар үйі Шанырақ! Біз dodi файлдарын қолданамыз.</p>
+            <p>Добро пожаловать на сайт Балабақша Шанырақ! Біз балаларға арналған қызықты материалдар ұсынамыз.</p>
             <button id="accept-btn">Принять</button>
             <button id="decline-btn">Отказаться</button>
         </div>
     </div>
 
     <header>
-        <h1>Балалар үйі Шанырақ</h1>
+        <h1>Балабақша Шанырақ</h1>
     </header>
 
     <nav>
@@ -152,7 +184,7 @@
     <section id="home">
         <h2>Басты бет</h2>
         <p>
-            Балалар үйі Шанырақ – әр баланың қуанышты балалығын қамтамасыз ететін мейірімге толы орын. Біз балаларға қауіпсіз орта, білім алу мүмкіндігі және сүйіспеншілікті қамтамасыз етеміз.
+            Балабақша Шанырақ – әр баланың қуанышты балалығын қамтамасыз ететін мейірімге толы орын. Біз балаларға қауіпсіз орта, білім алу мүмкіндігі және сүйіспеншілікті қамтамасыз етеміз.
         </p>
     </section>
 
@@ -160,7 +192,7 @@
     <section id="about">
         <h2>Біз туралы</h2>
         <p>
-            Балалар үйі Шанырақ 2005 жылы құрылған. Біздің негізгі мақсатымыз – әр балаға мейірім мен қамқорлық көрсету, олардың жеке қабілеттерін дамытуға мүмкіндік жасау.
+            Балабақша Шанырақ 2005 жылы құрылған. Біздің негізгі мақсатымыз – әр балаға мейірім мен қамқорлық көрсету, олардың жеке қабілеттерін дамытуға мүмкіндік жасау.
         </p>
         <p>
             Біздің ұжым: тәжірибелі педагогтар мен тәрбиешілер, психологтар мен медициналық қызметкерлер.
@@ -176,9 +208,9 @@
     <section id="news">
         <h2>Жаңалықтар мен іс-шаралар</h2>
         <ul>
-            <li>1 қыркүйек – Білім күні. Балалар үйінде мерекелік іс-шара өтті.</li>
+            <li>1 қыркүйек – Білім күні. Балабақшада мерекелік іс-шара өтті.</li>
             <li>20 қазан – Достар күні. Волонтерлер балаларға ойыншықтар мен кітаптар сыйлады.</li>
-            <li>10 желтоқсан – Адам құқықтары күні. Балалар үйінде тақырыптық сабақтар өткізілді.</li>
+            <li>10 желтоқсан – Адам құқықтары күні. Балабақшада тақырыптық сабақтар өткізілді.</li>
         </ul>
     </section>
 
@@ -191,11 +223,6 @@
             <li>Киім, ойыншық, оқу құралдары беру</li>
             <li>Волонтер ретінде қатысу</li>
         </ul>
-        <p>
-            Қосымша ақпарат алу үшін бізбен байланысыңыз:<br>
-            Телефон: 8 705 555 5585<br>
-            Электрондық пошта: shanyraq@mail.kz
-        </p>
     </section>
 
     <!-- Контакты -->
@@ -206,17 +233,10 @@
             Телефон: 8 705 555 5585<br>
             Электрондық пошта: shanyraq@mail.kz
         </p>
-        <p>Карта: [Google Maps қосуға болады]</p>
-        <p>Сіз бізге хабарласу үшін төмендегі форманы пайдалана аласыз:</p>
-        <ul>
-            <li>Аты-жөні</li>
-            <li>Email</li>
-            <li>Хабарлама</li>
-        </ul>
     </section>
 
     <footer>
-        © 2025 Балалар үйі Шанырақ
+        © 2025 Балабақша Шанырақ
     </footer>
 
     <script>
@@ -236,3 +256,4 @@
 
 </body>
 </html>
+
